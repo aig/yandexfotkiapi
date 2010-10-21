@@ -37,8 +37,6 @@ $service_document->parseURL("http://api-fotki.yandex.ru/api/users/" . urlencode(
 
 $album_collection = $service_document->getAlbumCollection();
 
-print "Album Collection: " . iconv('utf-8', 'cp866', $album_collection->getTitle()) . "\n";
-
 foreach ($album_collection->getList() as $album) {
   var_dump($album);
 
